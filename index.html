@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-sun"></i>
+                    <span data-i18n="siteTitle">Solar Solutions</span>
+                </div>
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="en">English</button>
+                    <button class="lang-btn" data-lang="hi">हिंदी</button>
+                    <button class="lang-btn" data-lang="mr">मराठी</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 data-i18n="heroTitle">Smart Solar Solutions for Your Home</h1>
+                <p data-i18n="heroSubtitle">Automated, efficient and cost-effective solar systems with maximum ROI</p>
+            </div>
+        </section>
+
+        <div class="container main-content">
+            <div class="content-grid">
+                <section class="features-section">
+                    <h2 data-i18n="featuresTitle">Solar System Features</h2>
+                    <p class="section-subtitle" data-i18n="featuresSubtitle">Discover the advanced features of our automated solar solutions</p>
+                    
+                    <div class="features-accordion" id="featuresAccordion">
+                        <!-- Features will be populated by JavaScript -->
+                    </div>
+                </section>
+
+                <section class="lead-form-section">
+                    <div class="form-container">
+                        <h2 data-i18n="formTitle">Get Your Solar Consultation</h2>
+                        <p class="form-subtitle" data-i18n="formSubtitle">Fill in your details and we'll contact you within 24 hours</p>
+                        
+                        <form id="leadForm">
+                            <div class="form-group">
+                                <label for="name" data-i18n="fullName">Full Name</label>
+                                <input type="text" id="name" name="name" required>
+                                <div class="error-message" id="nameError"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="whatsapp" data-i18n="whatsappNumber">WhatsApp Number</label>
+                                <input type="tel" id="whatsapp" name="whatsapp" required pattern="^[6-9]\d{9}$" placeholder="e.g., 9876543210">
+                                <div class="error-message" id="whatsappError"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="address" data-i18n="address">Address</label>
+                                <textarea id="address" name="address" rows="3" required></textarea>
+                                <div class="error-message" id="addressError"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="monthlyBill" data-i18n="monthlyBill">Monthly Average Electricity Bill (INR)</label>
+                                <input type="number" id="monthlyBill" name="monthlyBill" required min="500" step="100">
+                                <div class="error-message" id="billError"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="systemSize" data-i18n="systemSize">Interested System Size</label>
+                                <select id="systemSize" name="systemSize" required>
+                                    <option value="" disabled selected data-i18n="selectOption">Select an option</option>
+                                    <option value="1">1 kW</option>
+                                    <option value="2">2 kW</option>
+                                    <option value="3">3 kW</option>
+                                    <option value="4">4 kW</option>
+                                    <option value="5">5 kW</option>
+                                    <option value="custom" data-i18n="custom">Custom</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="mapLink" data-i18n="mapLink">Google Maps Location Link (Optional)</label>
+                                <input type="url" id="mapLink" name="mapLink" placeholder="https://maps.google.com/...">
+                                <div class="form-hint" data-i18n="mapHint">Paste your Google Maps link for precise location</div>
+                            </div>
+                            
+                            <div id="mapPreview" class="map-preview" style="display: none;"></div>
+                            
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="consent" name="consent" required>
+                                <label for="consent" data-i18n="consentText">I agree to be contacted via WhatsApp for solar consultation</label>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn" id="submitBtn">
+                                <span data-i18n="submitBtn">Submit & Chat on WhatsApp</span>
+                                <i class="fas fa-whatsapp"></i>
+                            </button>
+                            
+                            <div class="form-note">
+                                <i class="fas fa-info-circle"></i>
+                                <span data-i18n="formNote">Your data is secure and will only be used for solar consultation</span>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <div class="toast" id="toast"></div>
+    <div class="overlay" id="loadingOverlay">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+        <p data-i18n="loading">Processing your request...</p>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Google Translate Widget -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,hi,mr',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
