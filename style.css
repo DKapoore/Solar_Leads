@@ -798,3 +798,15 @@ textarea:focus {
         font-size: 0.8rem;
     }
 }
+
+/* Print Styles */
+@media print {
+    header, .lead-form-section, .toast, .overlay, #google_translate_element {
+        display: none;
+    }
+    
+    .solar-info-section,
+    .features-section {
+        break-inside: avoid;
+    }
+}
