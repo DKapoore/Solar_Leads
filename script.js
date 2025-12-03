@@ -554,18 +554,7 @@ ${mapLink ? `• Map: ${mapLink}` : ''}
 📞 Contact customer to schedule site visit.
 🎯 Provide personalized solar solution based on requirements.
 
-🕒 *Submitted at:* ${new Date().toLocaleString()}
-🌐 *Website:* Solar Solutions Form
-
-━━━━━━━━━━━━━━━━━━
-🔋 *Automated Solar Benefits:*
-✅ +5% More Power Generation
-✅ 20-30% Annual ROI
-✅ Zero Maintenance
-✅ 3-3.5 Years Payback
-✅ Government Subsidy Available
-✅ 24×7 Monitoring
-━━━━━━━━━━━━━━━━━━`;
+🕒 *Submitted at:* ${new Date().toLocaleString()};
     
     return encodeURIComponent(message);
 }
