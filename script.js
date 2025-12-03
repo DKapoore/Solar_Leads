@@ -55,47 +55,46 @@ const i18n = {
         loading: "Processing your request...",
         successMessage: "Form submitted successfully! Opening WhatsApp...",
         errorMessage: "Please check all fields and try again",
-        // script.js में i18n object के cityNames update करें
-cityNames: {
-        // All India Major Cities
-        mumbai: "Mumbai",
-        delhi: "Delhi",
-        bangalore: "Bangalore",
-        pune: "Pune",
-        hyderabad: "Hyderabad",
-        ahmedabad: "Ahmedabad",
-        chennai: "Chennai",
-        kolkata: "Kolkata",
-        
-        // Maharashtra Cities
-        nagpur: "Nagpur",
-        nashik: "Nashik",
-        aurangabad: "Aurangabad",
-        solapur: "Solapur",
-        amravati: "Amravati",
-        nanded: "Nanded",
-        kolhapur: "Kolhapur",
-        sangli: "Sangli-Miraj",
-        akola: "Akola",
-        jalgaon: "Jalgaon",
-        latur: "Latur",
-        dhule: "Dhule",
-        chandrapur: "Chandrapur",
-        parbhani: "Parbhani",
-        jalna: "Jalna",
-        bhusawal: "Bhusawal",
-        panvel: "Panvel",
-        thane: "Thane",
-        navi_mumbai: "Navi Mumbai",
-        vasai: "Vasai-Virar",
-        ulhasnagar: "Ulhasnagar",
-        satara: "Satara",
-        wardha: "Wardha",
-        gondia: "Gondia",
-        yeotmal: "Yeotmal",
-        nandurbar: "Nandurbar",
-        other: "Other City"
-    }
+        cityNames: {
+            // All India Major Cities
+            mumbai: "Mumbai",
+            delhi: "Delhi",
+            bangalore: "Bangalore",
+            pune: "Pune",
+            hyderabad: "Hyderabad",
+            ahmedabad: "Ahmedabad",
+            chennai: "Chennai",
+            kolkata: "Kolkata",
+            
+            // Maharashtra Cities
+            nagpur: "Nagpur",
+            nashik: "Nashik",
+            aurangabad: "Aurangabad",
+            solapur: "Solapur",
+            amravati: "Amravati",
+            nanded: "Nanded",
+            kolhapur: "Kolhapur",
+            sangli: "Sangli-Miraj",
+            akola: "Akola",
+            jalgaon: "Jalgaon",
+            latur: "Latur",
+            dhule: "Dhule",
+            chandrapur: "Chandrapur",
+            parbhani: "Parbhani",
+            jalna: "Jalna",
+            bhusawal: "Bhusawal",
+            panvel: "Panvel",
+            thane: "Thane",
+            navi_mumbai: "Navi Mumbai",
+            vasai: "Vasai-Virar",
+            ulhasnagar: "Ulhasnagar",
+            satara: "Satara",
+            wardha: "Wardha",
+            gondia: "Gondia",
+            yeotmal: "Yeotmal",
+            nandurbar: "Nandurbar",
+            other: "Other City"
+        }
     },
     
     hi: {
@@ -149,42 +148,45 @@ cityNames: {
         successMessage: "फॉर्म सफलतापूर्वक सबमिट हो गया! WhatsApp खोला जा रहा है...",
         errorMessage: "कृपया सभी फ़ील्ड्स जांचें और पुनः प्रयास करें",
         cityNames: {
-        mumbai: "मुंबई",
-        delhi: "दिल्ली",
-        bangalore: "बेंगलुरु",
-        pune: "पुणे",
-        hyderabad: "हैदराबाद",
-        ahmedabad: "अहमदाबाद",
-        chennai: "चेन्नई",
-        kolkata: "कोलकाता",
-        nagpur: "नागपुर",
-        nashik: "नाशिक",
-        aurangabad: "औरंगाबाद",
-        solapur: "सोलापुर",
-        amravati: "अमरावती",
-        nanded: "नांदेड़",
-        kolhapur: "कोल्हापुर",
-        sangli: "सांगली-मिरज",
-        akola: "अकोला",
-        jalgaon: "जलगाँव",
-        latur: "लातूर",
-        dhule: "धुले",
-        chandrapur: "चंद्रपुर",
-        parbhani: "परभणी",
-        jalna: "जालना",
-        bhusawal: "भुसावल",
-        panvel: "पनवेल",
-        thane: "ठाणे",
-        navi_mumbai: "नवी मुंबई",
-        vasai: "वसई-विरार",
-        ulhasnagar: "उल्हासनगर",
-        satara: "सतारा",
-        wardha: "वर्धा",
-        gondia: "गोंदिया",
-        yeotmal: "यवतमाल",
-        nandurbar: "नंदुरबार",
-        other: "अन्य शहर"
-    }
+            // All India Major Cities
+            mumbai: "मुंबई",
+            delhi: "दिल्ली",
+            bangalore: "बेंगलुरु",
+            pune: "पुणे",
+            hyderabad: "हैदराबाद",
+            ahmedabad: "अहमदाबाद",
+            chennai: "चेन्नई",
+            kolkata: "कोलकाता",
+            
+            // Maharashtra Cities
+            nagpur: "नागपुर",
+            nashik: "नाशिक",
+            aurangabad: "औरंगाबाद",
+            solapur: "सोलापुर",
+            amravati: "अमरावती",
+            nanded: "नांदेड़",
+            kolhapur: "कोल्हापुर",
+            sangli: "सांगली-मिरज",
+            akola: "अकोला",
+            jalgaon: "जलगाँव",
+            latur: "लातूर",
+            dhule: "धुले",
+            chandrapur: "चंद्रपुर",
+            parbhani: "परभणी",
+            jalna: "जालना",
+            bhusawal: "भुसावल",
+            panvel: "पनवेल",
+            thane: "ठाणे",
+            navi_mumbai: "नवी मुंबई",
+            vasai: "वसई-विरार",
+            ulhasnagar: "उल्हासनगर",
+            satara: "सतारा",
+            wardha: "वर्धा",
+            gondia: "गोंदिया",
+            yeotmal: "यवतमाल",
+            nandurbar: "नंदुरबार",
+            other: "अन्य शहर"
+        }
     },
     
     mr: {
@@ -238,42 +240,45 @@ cityNames: {
         successMessage: "फॉर्म यशस्वीरित्या सबमिट झाला! WhatsApp उघडले जात आहे...",
         errorMessage: "कृपया सर्व फील्ड तपासा आणि पुन्हा प्रयत्न करा",
         cityNames: {
-        mumbai: "मुंबई",
-        delhi: "दिल्ली",
-        bangalore: "बेंगळुरू",
-        pune: "पुणे",
-        hyderabad: "हैदराबाद",
-        ahmedabad: "अहमदाबाद",
-        chennai: "चेन्नई",
-        kolkata: "कोलकाता",
-        nagpur: "नागपूर",
-        nashik: "नाशिक",
-        aurangabad: "औरंगाबाद",
-        solapur: "सोलापूर",
-        amravati: "अमरावती",
-        nanded: "नांदेड",
-        kolhapur: "कोल्हापूर",
-        sangli: "सांगली-मिरज",
-        akola: "अकोला",
-        jalgaon: "जळगाव",
-        latur: "लातूर",
-        dhule: "धुळे",
-        chandrapur: "चंद्रपूर",
-        parbhani: "परभणी",
-        jalna: "जालना",
-        bhusawal: "भुसावळ",
-        panvel: "पनवेल",
-        thane: "ठाणे",
-        navi_mumbai: "नवी मुंबई",
-        vasai: "वसई-विरार",
-        ulhasnagar: "उल्हासनगर",
-        satara: "सातारा",
-        wardha: "वर्धा",
-        gondia: "गोंदिया",
-        yeotmal: "यवतमाळ",
-        nandurbar: "नंदुरबार",
-        other: "इतर शहर"
-    }
+            // All India Major Cities
+            mumbai: "मुंबई",
+            delhi: "दिल्ली",
+            bangalore: "बेंगळुरू",
+            pune: "पुणे",
+            hyderabad: "हैदराबाद",
+            ahmedabad: "अहमदाबाद",
+            chennai: "चेन्नई",
+            kolkata: "कोलकाता",
+            
+            // Maharashtra Cities
+            nagpur: "नागपूर",
+            nashik: "नाशिक",
+            aurangabad: "औरंगाबाद",
+            solapur: "सोलापूर",
+            amravati: "अमरावती",
+            nanded: "नांदेड",
+            kolhapur: "कोल्हापूर",
+            sangli: "सांगली-मिरज",
+            akola: "अकोला",
+            jalgaon: "जळगाव",
+            latur: "लातूर",
+            dhule: "धुळे",
+            chandrapur: "चंद्रपूर",
+            parbhani: "परभणी",
+            jalna: "जालना",
+            bhusawal: "भुसावळ",
+            panvel: "पनवेल",
+            thane: "ठाणे",
+            navi_mumbai: "नवी मुंबई",
+            vasai: "वसई-विरार",
+            ulhasnagar: "उल्हासनगर",
+            satara: "सातारा",
+            wardha: "वर्धा",
+            gondia: "गोंदिया",
+            yeotmal: "यवतमाळ",
+            nandurbar: "नंदुरबार",
+            other: "इतर शहर"
+        }
     }
 };
 
@@ -416,6 +421,54 @@ function resetPopupTimer() {
     }
 }
 
+// Get Google Maps Link for City
+function getCityMapLink(city) {
+    const cityCoordinates = {
+        // All India Major Cities
+        mumbai: "19.0760,72.8777",
+        delhi: "28.7041,77.1025",
+        bangalore: "12.9716,77.5946",
+        pune: "18.5204,73.8567",
+        hyderabad: "17.3850,78.4867",
+        ahmedabad: "23.0225,72.5714",
+        chennai: "13.0827,80.2707",
+        kolkata: "22.5726,88.3639",
+        
+        // Maharashtra Cities
+        nagpur: "21.1458,79.0882",
+        nashik: "19.9975,73.7898",
+        aurangabad: "19.8762,75.3433",
+        solapur: "17.6599,75.9064",
+        amravati: "20.9374,77.7796",
+        nanded: "19.1383,77.3210",
+        kolhapur: "16.7050,74.2433",
+        sangli: "16.8524,74.5815",
+        akola: "20.7030,77.0233",
+        jalgaon: "21.0077,75.5626",
+        latur: "18.4088,76.5604",
+        dhule: "20.9020,74.7774",
+        chandrapur: "19.9608,79.2951",
+        parbhani: "19.2686,76.7708",
+        jalna: "19.8413,75.8860",
+        bhusawal: "21.0486,75.7854",
+        panvel: "18.9881,73.1100",
+        thane: "19.2183,72.9781",
+        navi_mumbai: "19.0330,73.0297",
+        vasai: "19.3919,72.8397",
+        ulhasnagar: "19.2167,73.1500",
+        satara: "17.6805,74.0183",
+        wardha: "20.7453,78.6022",
+        gondia: "21.4625,80.1920",
+        yeotmal: "20.3888,78.1204",
+        nandurbar: "21.3707,74.2409"
+    };
+    
+    if (cityCoordinates[city]) {
+        return `https://maps.google.com/maps?q=${cityCoordinates[city]}`;
+    }
+    return null;
+}
+
 // Form Validation
 function initFormValidation() {
     const whatsappInput = document.getElementById('whatsapp');
@@ -472,54 +525,6 @@ function showLoading(show) {
     } else {
         loadingOverlay.classList.remove('active');
     }
-}
-
-// Get Google Maps Link for City
-function getCityMapLink(city) {
-    const cityCoordinates = {
-        // All India Major Cities
-        mumbai: "19.0760,72.8777",
-        delhi: "28.7041,77.1025",
-        bangalore: "12.9716,77.5946",
-        pune: "18.5204,73.8567",
-        hyderabad: "17.3850,78.4867",
-        ahmedabad: "23.0225,72.5714",
-        chennai: "13.0827,80.2707",
-        kolkata: "22.5726,88.3639",
-        
-        // Maharashtra Cities
-        nagpur: "21.1458,79.0882",
-        nashik: "19.9975,73.7898",
-        aurangabad: "19.8762,75.3433",
-        solapur: "17.6599,75.9064",
-        amravati: "20.9374,77.7796",
-        nanded: "19.1383,77.3210",
-        kolhapur: "16.7050,74.2433",
-        sangli: "16.8524,74.5815",
-        akola: "20.7030,77.0233",
-        jalgaon: "21.0077,75.5626",
-        latur: "18.4088,76.5604",
-        dhule: "20.9020,74.7774",
-        chandrapur: "19.9608,79.2951",
-        parbhani: "19.2686,76.7708",
-        jalna: "19.8413,75.8860",
-        bhusawal: "21.0486,75.7854",
-        panvel: "18.9881,73.1100",
-        thane: "19.2183,72.9781",
-        navi_mumbai: "19.0330,73.0297",
-        vasai: "19.3919,72.8397",
-        ulhasnagar: "19.2167,73.1500",
-        satara: "17.6805,74.0183",
-        wardha: "20.7453,78.6022",
-        gondia: "21.4625,80.1920",
-        yeotmal: "20.3888,78.1204",
-        nandurbar: "21.3707,74.2409"
-    };
-    
-    if (cityCoordinates[city]) {
-        return `https://maps.google.com/maps?q=${cityCoordinates[city]}`;
-    }
-    return null;
 }
 
 // Generate WhatsApp Message with Emojis
