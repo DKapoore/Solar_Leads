@@ -133,10 +133,16 @@
                     <i class="fas fa-sun" aria-hidden="true"></i>
                     <span data-i18n="siteTitle">Solar Solutions</span>
                 </div>
-                <div class="language-switcher">
-                    <button class="lang-btn active" data-lang="en" aria-label="Switch to English">English</button>
-                    <button class="lang-btn" data-lang="hi" aria-label="Switch to Hindi">हिंदी</button>
-                    <button class="lang-btn" data-lang="mr" aria-label="Switch to Marathi">मराठी</button>
+                <div class="header-actions">
+                    <div class="language-switcher">
+                        <button class="lang-btn active" data-lang="en" aria-label="Switch to English">English</button>
+                        <button class="lang-btn" data-lang="hi" aria-label="Switch to Hindi">हिंदी</button>
+                        <button class="lang-btn" data-lang="mr" aria-label="Switch to Marathi">मराठी</button>
+                    </div>
+                    <button class="contact-btn" id="contactBtn" aria-label="Contact Us">
+                        <i class="fas fa-phone-alt"></i>
+                        <span data-i18n="contactUs">Contact Us</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -155,115 +161,198 @@
             </div>
         </section>
 
-        <div class="container main-content">
-            <div class="content-grid">
-                <section class="features-section" aria-labelledby="features-title">
-                    <h2 id="features-title" data-i18n="featuresTitle">Solar System Features</h2>
-                    <p class="section-subtitle" data-i18n="featuresSubtitle">Discover the advanced features of our automated solar solutions</p>
-                    
-                    <div class="features-accordion" id="featuresAccordion" role="region" aria-label="Solar features accordion">
-                        <!-- Features will be populated by JavaScript -->
+        <!-- Solar Information Section -->
+        <section class="solar-info-section">
+            <div class="container">
+                <h2 data-i18n="solarInfoTitle">Complete Solar System Information</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <i class="fas fa-robot"></i>
+                        <h3 data-i18n="info1Title">Fully Automated Cleaning</h3>
+                        <p data-i18n="info1Desc">Daily automatic cleaning at 6:00 AM with zero manual effort</p>
                     </div>
-                </section>
-
-                <section class="lead-form-section" aria-labelledby="form-title">
-                    <div class="form-container">
-                        <h2 id="form-title" data-i18n="formTitle">Get Your Solar Consultation</h2>
-                        <p class="form-subtitle" data-i18n="formSubtitle">Fill in your details and we'll contact you within 24 hours</p>
-                        
-                        <form id="leadForm" role="form" aria-label="Solar consultation form">
-                            <div class="form-group">
-                                <label for="name" data-i18n="fullName">Full Name</label>
-                                <input type="text" id="name" name="name" required aria-required="true" aria-describedby="nameError">
-                                <div class="error-message" id="nameError" role="alert"></div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="whatsapp" data-i18n="whatsappNumber">WhatsApp Number</label>
-                                <input type="tel" id="whatsapp" name="whatsapp" required aria-required="true" pattern="^[6-9]\d{9}$" placeholder="e.g., 9876543210" aria-describedby="whatsappError">
-                                <div class="error-message" id="whatsappError" role="alert"></div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="address" data-i18n="address">Address</label>
-                                <textarea id="address" name="address" rows="3" required aria-required="true" aria-describedby="addressError"></textarea>
-                                <div class="error-message" id="addressError" role="alert"></div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="monthlyBill" data-i18n="monthlyBill">Monthly Average Electricity Bill (INR)</label>
-                                <input type="number" id="monthlyBill" name="monthlyBill" required aria-required="true" min="500" step="100" aria-describedby="billError">
-                                <div class="error-message" id="billError" role="alert"></div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="systemSize" data-i18n="systemSize">Interested System Size</label>
-                                <select id="systemSize" name="systemSize" required aria-required="true" aria-describedby="systemSizeHelp">
-                                    <option value="" disabled selected data-i18n="selectOption">Select an option</option>
-                                    <option value="1">1 kW</option>
-                                    <option value="2">2 kW</option>
-                                    <option value="3">3 kW</option>
-                                    <option value="4">4 kW</option>
-                                    <option value="5">5 kW</option>
-                                    <option value="custom" data-i18n="custom">Custom</option>
-                                </select>
-                                <div id="systemSizeHelp" class="form-hint" data-i18n="systemSizeHelp">Choose based on your monthly consumption</div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="mapLink" data-i18n="mapLink">Google Maps Location Link (Optional)</label>
-                                <input type="url" id="mapLink" name="mapLink" placeholder="https://maps.google.com/..." aria-describedby="mapHint">
-                                <div class="form-hint" id="mapHint" data-i18n="mapHint">Paste your Google Maps link for precise location</div>
-                            </div>
-                            
-                            <div id="mapPreview" class="map-preview" style="display: none;" aria-live="polite"></div>
-                            
-                            <div class="form-group checkbox-group">
-                                <input type="checkbox" id="consent" name="consent" required aria-required="true">
-                                <label for="consent" data-i18n="consentText">I agree to be contacted via WhatsApp for solar consultation</label>
-                            </div>
-                            
-                            <button type="submit" class="submit-btn" id="submitBtn" aria-label="Submit form and open WhatsApp">
-                                <span data-i18n="submitBtn">Submit & Chat on WhatsApp</span>
-                                <i class="fas fa-whatsapp" aria-hidden="true"></i>
-                            </button>
-                            
-                            <div class="form-note">
-                                <i class="fas fa-info-circle" aria-hidden="true"></i>
-                                <span data-i18n="formNote">Your data is secure and will only be used for solar consultation</span>
-                            </div>
-                        </form>
+                    <div class="info-card">
+                        <i class="fas fa-bolt"></i>
+                        <h3 data-i18n="info2Title">+5% More Power</h3>
+                        <p data-i18n="info2Desc">Increased power generation compared to manual cleaning</p>
                     </div>
-                </section>
+                    <div class="info-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3 data-i18n="info3Title">20-30% ROI</h3>
+                        <p data-i18n="info3Desc">High annual return on investment with 3-3.5 years payback</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3 data-i18n="info4Title">Strong Warranties</h3>
+                        <p data-i18n="info4Desc">12+30 years panel warranty, 10 years inverter warranty</p>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Additional Features Section -->
+        <section class="features-section">
+            <div class="container">
+                <h2 data-i18n="benefitsTitle">Key Benefits</h2>
+                <div class="benefits-list">
+                    <div class="benefit-item">
+                        <i class="fas fa-check"></i>
+                        <span data-i18n="benefit1">Government subsidy available up to ₹78,000</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check"></i>
+                        <span data-i18n="benefit2">24×7 system monitoring with mobile app</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check"></i>
+                        <span data-i18n="benefit3">Free comprehensive system insurance</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check"></i>
+                        <span data-i18n="benefit4">Net metering application support included</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check"></i>
+                        <span data-i18n="benefit5">48-hour service response guarantee</span>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Additional SEO Content Section (Hidden from view but readable by search engines) -->
-    <section class="seo-content" aria-hidden="true">
+    <!-- Footer -->
+    <footer>
         <div class="container">
-            <h2>Automated Solar Cleaning Systems in India</h2>
-            <p>Discover India's first fully automated solar cleaning system that increases power generation by 5% compared to manual cleaning. Our innovative solar solutions provide 20-30% annual return on investment (ROI) with complete payback in just 3-3.5 years.</p>
-            
-            <h3>Benefits of Automated Solar Systems</h3>
-            <ul>
-                <li>Daily automatic self-cleaning at 6:00 AM without manual intervention</li>
-                <li>Zero maintenance and effort required for solar panel cleaning</li>
-                <li>High-pressure sprinklers with CPVC piping for efficient cleaning</li>
-                <li>1 HP water pump ensures steady pressure for optimal performance</li>
-                <li>Smart Energy Optimizer reduces electricity consumption by up to 20%</li>
-            </ul>
-            
-            <h3>Solar System Components and Warranty</h3>
-            <p>Our solar solutions use Tier-1 quality components with global standard engineering. We offer strong warranties including 12 years product warranty and 30 years performance warranty for panels, 10 years for inverter, and 5 years for structure.</p>
-            
-            <h3>Government Subsidy and Support</h3>
-            <p>Avail government subsidies up to ₹78,000 as per MNRE guidelines for solar installations. We provide complete assistance with net metering application and coordination with local electricity departments.</p>
-            
-            <h3>Real-time Monitoring and Support</h3>
-            <p>Our systems include 24×7 monitoring with mobile app-based real-time solar generation tracking. We guarantee 48-hour service response time and provide free comprehensive system insurance for complete peace of mind.</p>
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <i class="fas fa-sun"></i>
+                        <span data-i18n="siteTitle">Solar Solutions</span>
+                    </div>
+                    <p class="footer-tagline" data-i18n="footerTagline">Smart Solar Solutions for a Sustainable Future</p>
+                </div>
+                <div class="footer-contact">
+                    <button class="footer-contact-btn" id="footerContactBtn">
+                        <i class="fas fa-file-alt"></i>
+                        <span data-i18n="getConsultation">Get Free Consultation</span>
+                    </button>
+                    <p class="footer-note" data-i18n="footerNote">Fill form for personalized solar solution</p>
+                </div>
+            </div>
         </div>
-    </section>
+    </footer>
+
+    <!-- Form Modal -->
+    <div class="modal-overlay" id="formModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="form-container">
+                <h2 data-i18n="formTitle">Get Your Solar Consultation</h2>
+                <p class="form-subtitle" data-i18n="formSubtitle">Fill in your details and we'll contact you within 24 hours</p>
+                
+                <form id="leadForm" role="form" aria-label="Solar consultation form">
+                    <div class="form-group">
+                        <label for="name" data-i18n="fullName">Full Name</label>
+                        <input type="text" id="name" name="name" required aria-required="true" aria-describedby="nameError">
+                        <div class="error-message" id="nameError" role="alert"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="whatsapp" data-i18n="whatsappNumber">WhatsApp Number</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" required aria-required="true" pattern="^[6-9]\d{9}$" placeholder="e.g., 9876543210" aria-describedby="whatsappError">
+                        <div class="error-message" id="whatsappError" role="alert"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address" data-i18n="address">Address</label>
+                        <textarea id="address" name="address" rows="3" required aria-required="true" aria-describedby="addressError"></textarea>
+                        <div class="error-message" id="addressError" role="alert"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="monthlyBill" data-i18n="monthlyBill">Monthly Average Electricity Bill (INR)</label>
+                        <input type="number" id="monthlyBill" name="monthlyBill" required aria-required="true" min="500" step="100" aria-describedby="billError">
+                        <div class="error-message" id="billError" role="alert"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="systemSize" data-i18n="systemSize">Interested System Size</label>
+                        <select id="systemSize" name="systemSize" required aria-required="true" aria-describedby="systemSizeHelp">
+                            <option value="" disabled selected data-i18n="selectOption">Select an option</option>
+                            <option value="1">1 kW</option>
+                            <option value="2">2 kW</option>
+                            <option value="3">3 kW</option>
+                            <option value="4">4 kW</option>
+                            <option value="5">5 kW</option>
+                            <option value="custom" data-i18n="custom">Custom</option>
+                        </select>
+                        <div id="systemSizeHelp" class="form-hint" data-i18n="systemSizeHelp">Choose based on your monthly consumption</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="location" data-i18n="location">Select Your Location (Optional)</label>
+                        <select id="location" name="location" aria-describedby="locationHelp">
+                        <option value="" data-i18n="selectLocation">Select nearest city</option>
+                        <!-- All India Major Cities -->
+                        <option value="mumbai">Mumbai</option>
+                        <option value="delhi">Delhi</option>
+                        <option value="bangalore">Bangalore</option>
+                        <option value="pune">Pune</option>
+                        <option value="hyderabad">Hyderabad</option>
+                        <option value="ahmedabad">Ahmedabad</option>
+                        <option value="chennai">Chennai</option>
+                        <option value="kolkata">Kolkata</option>
+                        
+                        <!-- Maharashtra Cities -->
+                        <option value="nagpur">Nagpur</option>
+                        <option value="nashik">Nashik</option>
+                        <option value="aurangabad">Aurangabad</option>
+                        <option value="solapur">Solapur</option>
+                        <option value="amravati">Amravati</option>
+                        <option value="nanded">Nanded</option>
+                        <option value="kolhapur">Kolhapur</option>
+                        <option value="sangli">Sangli-Miraj</option>
+                        <option value="akola">Akola</option>
+                        <option value="jalgaon">Jalgaon</option>
+                        <option value="latur">Latur</option>
+                        <option value="dhule">Dhule</option>
+                        <option value="chandrapur">Chandrapur</option>
+                        <option value="parbhani">Parbhani</option>
+                        <option value="jalna">Jalna</option>
+                        <option value="bhusawal">Bhusawal</option>
+                        <option value="panvel">Panvel</option>
+                        <option value="thane">Thane</option>
+                        <option value="navi_mumbai">Navi Mumbai</option>
+                        <option value="vasai">Vasai-Virar</option>
+                        <option value="ulhasnagar">Ulhasnagar</option>
+                        <option value="satara">Satara</option>
+                        <option value="wardha">Wardha</option>
+                        <option value="gondia">Gondia</option>
+                        <option value="yeotmal">Yeotmal</option>
+                        <option value="nandurbar">Nandurbar</option>
+                        <option value="other" data-i18n="otherCity">Other City</option>
+                    </select>
+                        <div id="locationHelp" class="form-hint" data-i18n="locationHelp">Helps us provide accurate service estimates</div>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="consent" name="consent" required aria-required="true">
+                        <label for="consent" data-i18n="consentText">I agree to be contacted via WhatsApp for solar consultation</label>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn" id="submitBtn" aria-label="Submit form and open WhatsApp">
+                        <span data-i18n="submitBtn">Submit & Chat on WhatsApp</span>
+                        <i class="fas fa-whatsapp" aria-hidden="true"></i>
+                    </button>
+                    
+                    <div class="form-note">
+                        <i class="fas fa-info-circle" aria-hidden="true"></i>
+                        <span data-i18n="formNote">Your data is secure and will only be used for solar consultation</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <!-- Toast Notification -->
     <div class="toast" id="toast" role="alert" aria-live="polite"></div>
