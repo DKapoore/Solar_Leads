@@ -23,7 +23,7 @@ const i18n = {
         
         // Benefits Section
         benefitsTitle: "Key Benefits",
-        benefit1: "Government subsidy available up to ₹78,000",
+        benefit1: "Government subsidy available up to ₹78,000+ ₹20,000 Extra Discount",
         benefit2: "24×7 system monitoring with mobile app",
         benefit3: "Free comprehensive system insurance",
         benefit4: "Net metering application support included",
@@ -117,7 +117,7 @@ const i18n = {
         info4Desc: "12+30 साल पैनल वारंटी, 10 साल इन्वर्टर वारंटी",
         
         benefitsTitle: "मुख्य लाभ",
-        benefit1: "सरकारी सब्सिडी उपलब्ध ₹78,000 तक",
+        benefit1: "सरकारी सब्सिडी उपलब्ध ₹78,000 तक + ₹20,000 अतिरिक्त छूट",
         benefit2: "24×7 सिस्टम मॉनिटरिंग मोबाइल ऐप के साथ",
         benefit3: "मुफ्त व्यापक सिस्टम बीमा",
         benefit4: "नेट मीटरिंग एप्लीकेशन सपोर्ट शामिल",
@@ -209,7 +209,7 @@ const i18n = {
         info4Desc: "12+30 वर्ष पॅनेल हमी, 10 वर्ष इन्व्हर्टर हमी",
         
         benefitsTitle: "मुख्य फायदे",
-        benefit1: "सरकारी अनुदान उपलब्ध ₹78,000 पर्यंत",
+        benefit1: "सरकारी अनुदान उपलब्ध ₹78,000 पर्यंत + ₹20,000 अतिरिक्त छूट",
         benefit2: "24×7 सिस्टम देखरेख मोबाइल अॅप सह",
         benefit3: "विनामूल्य व्यापक सिस्टम विमा",
         benefit4: "नेट मीटरिंग अर्ज सपोर्ट समाविष्ट",
