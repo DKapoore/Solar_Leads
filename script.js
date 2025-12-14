@@ -3,12 +3,18 @@ const i18n = {
     en: {
         // UI Elements
         siteTitle: "Solar Solutions",
+        skipToContent: "Skip to main content",
         heroTitle: "Smart Solar Solutions for Your Home",
         heroSubtitle: "Automated, efficient and cost-effective solar systems with maximum ROI",
         heroFeature1: "+5% More Power",
         heroFeature2: "20-30% ROI",
         heroFeature3: "Zero Maintenance",
         contactUs: "Contact Us",
+        
+        // Language buttons
+        langEnglish: "English",
+        langHindi: "हिंदी",
+        langMarathi: "मराठी",
         
         // Solar Info Section
         solarInfoTitle: "Complete Solar System Information",
@@ -23,7 +29,7 @@ const i18n = {
         
         // Benefits Section
         benefitsTitle: "Key Benefits",
-        benefit1: "Government subsidy available up to ₹78,000+ ₹20,000 Extra Discount",
+        benefit1: "Government subsidy available up to ₹78,000 + ₹20,000 Extra Discount",
         benefit2: "24×7 system monitoring with mobile app",
         benefit3: "Free comprehensive system insurance",
         benefit4: "Net metering application support included",
@@ -38,11 +44,20 @@ const i18n = {
         formTitle: "Get Your Solar Consultation",
         formSubtitle: "Fill in your details and we'll contact you within 24 hours",
         fullName: "Full Name",
+        fullNamePlaceholder: "Enter your full name",
         whatsappNumber: "WhatsApp Number",
+        whatsappPlaceholder: "e.g., 9876543210",
         address: "Address",
+        addressPlaceholder: "Enter complete address",
         monthlyBill: "Monthly Average Electricity Bill (INR)",
+        monthlyBillPlaceholder: "Enter monthly bill amount",
         systemSize: "Interested System Size",
         selectOption: "Select an option",
+        systemSize1kW: "1 kW",
+        systemSize2kW: "2 kW",
+        systemSize3kW: "3 kW",
+        systemSize4kW: "4 kW",
+        systemSize5kW: "5 kW",
         custom: "Custom",
         location: "Select Your Location (Optional)",
         selectLocation: "Select nearest city",
@@ -55,56 +70,57 @@ const i18n = {
         loading: "Processing your request...",
         successMessage: "Form submitted successfully! Opening WhatsApp...",
         errorMessage: "Please check all fields and try again",
-        cityNames: {
-            // All India Major Cities
-            mumbai: "Mumbai",
-            delhi: "Delhi",
-            bangalore: "Bangalore",
-            pune: "Pune",
-            hyderabad: "Hyderabad",
-            ahmedabad: "Ahmedabad",
-            chennai: "Chennai",
-            kolkata: "Kolkata",
-            
-            // Maharashtra Cities
-            nagpur: "Nagpur",
-            nashik: "Nashik",
-            aurangabad: "Aurangabad",
-            solapur: "Solapur",
-            amravati: "Amravati",
-            nanded: "Nanded",
-            kolhapur: "Kolhapur",
-            sangli: "Sangli-Miraj",
-            akola: "Akola",
-            jalgaon: "Jalgaon",
-            latur: "Latur",
-            dhule: "Dhule",
-            chandrapur: "Chandrapur",
-            parbhani: "Parbhani",
-            jalna: "Jalna",
-            bhusawal: "Bhusawal",
-            panvel: "Panvel",
-            thane: "Thane",
-            navi_mumbai: "Navi Mumbai",
-            vasai: "Vasai-Virar",
-            ulhasnagar: "Ulhasnagar",
-            satara: "Satara",
-            wardha: "Wardha",
-            gondia: "Gondia",
-            yeotmal: "Yeotmal",
-            nandurbar: "Nandurbar",
-            other: "Other City"
-        }
+        
+        // City names
+        cityMumbai: "Mumbai",
+        cityDelhi: "Delhi",
+        cityBangalore: "Bangalore",
+        cityPune: "Pune",
+        cityHyderabad: "Hyderabad",
+        cityAhmedabad: "Ahmedabad",
+        cityChennai: "Chennai",
+        cityKolkata: "Kolkata",
+        cityNagpur: "Nagpur",
+        cityNashik: "Nashik",
+        cityAurangabad: "Aurangabad",
+        citySolapur: "Solapur",
+        cityAmravati: "Amravati",
+        cityNanded: "Nanded",
+        cityKolhapur: "Kolhapur",
+        citySangli: "Sangli-Miraj",
+        cityAkola: "Akola",
+        cityJalgaon: "Jalgaon",
+        cityLatur: "Latur",
+        cityDhule: "Dhule",
+        cityChandrapur: "Chandrapur",
+        cityParbhani: "Parbhani",
+        cityJalna: "Jalna",
+        cityBhusawal: "Bhusawal",
+        cityPanvel: "Panvel",
+        cityThane: "Thane",
+        cityNaviMumbai: "Navi Mumbai",
+        cityVasai: "Vasai-Virar",
+        cityUlhasnagar: "Ulhasnagar",
+        citySatara: "Satara",
+        cityWardha: "Wardha",
+        cityGondia: "Gondia",
+        cityYeotmal: "Yeotmal",
+        cityNandurbar: "Nandurbar"
     },
     
     hi: {
         siteTitle: "सोलर समाधान",
+        skipToContent: "मुख्य सामग्री पर जाएं",
         heroTitle: "आपके घर के लिए स्मार्ट सोलर समाधान",
         heroSubtitle: "स्वचालित, कुशल और लागत प्रभावी सौर प्रणाली अधिकतम ROI के साथ",
         heroFeature1: "+5% ज्यादा बिजली",
         heroFeature2: "20-30% ROI",
         heroFeature3: "जीरो मेंटेनेंस",
         contactUs: "संपर्क करें",
+        
+        langEnglish: "English",
+        langHindi: "हिंदी",
+        langMarathi: "मराठी",
         
         solarInfoTitle: "पूर्ण सोलर सिस्टम जानकारी",
         info1Title: "पूरी तरह स्वचालित सफाई",
@@ -130,11 +146,20 @@ const i18n = {
         formTitle: "अपनी सोलर कंसल्टेशन प्राप्त करें",
         formSubtitle: "अपना विवरण भरें और हम 24 घंटे के भीतर संपर्क करेंगे",
         fullName: "पूरा नाम",
+        fullNamePlaceholder: "अपना पूरा नाम दर्ज करें",
         whatsappNumber: "व्हाट्सएप नंबर",
+        whatsappPlaceholder: "उदा., 9876543210",
         address: "पता",
+        addressPlaceholder: "पूरा पता दर्ज करें",
         monthlyBill: "मासिक औसत बिजली बिल (INR)",
+        monthlyBillPlaceholder: "मासिक बिल राशि दर्ज करें",
         systemSize: "इच्छित सिस्टम आकार",
         selectOption: "एक विकल्प चुनें",
+        systemSize1kW: "1 किलोवाट",
+        systemSize2kW: "2 किलोवाट",
+        systemSize3kW: "3 किलोवाट",
+        systemSize4kW: "4 किलोवाट",
+        systemSize5kW: "5 किलोवाट",
         custom: "कस्टम",
         location: "अपना स्थान चुनें (वैकल्पिक)",
         selectLocation: "नजदीकी शहर चुनें",
@@ -147,56 +172,56 @@ const i18n = {
         loading: "आपका अनुरोध प्रोसेस हो रहा है...",
         successMessage: "फॉर्म सफलतापूर्वक सबमिट हो गया! WhatsApp खोला जा रहा है...",
         errorMessage: "कृपया सभी फ़ील्ड्स जांचें और पुनः प्रयास करें",
-        cityNames: {
-            // All India Major Cities
-            mumbai: "मुंबई",
-            delhi: "दिल्ली",
-            bangalore: "बेंगलुरु",
-            pune: "पुणे",
-            hyderabad: "हैदराबाद",
-            ahmedabad: "अहमदाबाद",
-            chennai: "चेन्नई",
-            kolkata: "कोलकाता",
-            
-            // Maharashtra Cities
-            nagpur: "नागपुर",
-            nashik: "नाशिक",
-            aurangabad: "औरंगाबाद",
-            solapur: "सोलापुर",
-            amravati: "अमरावती",
-            nanded: "नांदेड़",
-            kolhapur: "कोल्हापुर",
-            sangli: "सांगली-मिरज",
-            akola: "अकोला",
-            jalgaon: "जलगाँव",
-            latur: "लातूर",
-            dhule: "धुले",
-            chandrapur: "चंद्रपुर",
-            parbhani: "परभणी",
-            jalna: "जालना",
-            bhusawal: "भुसावल",
-            panvel: "पनवेल",
-            thane: "ठाणे",
-            navi_mumbai: "नवी मुंबई",
-            vasai: "वसई-विरार",
-            ulhasnagar: "उल्हासनगर",
-            satara: "सतारा",
-            wardha: "वर्धा",
-            gondia: "गोंदिया",
-            yeotmal: "यवतमाल",
-            nandurbar: "नंदुरबार",
-            other: "अन्य शहर"
-        }
+        
+        cityMumbai: "मुंबई",
+        cityDelhi: "दिल्ली",
+        cityBangalore: "बेंगलुरु",
+        cityPune: "पुणे",
+        cityHyderabad: "हैदराबाद",
+        cityAhmedabad: "अहमदाबाद",
+        cityChennai: "चेन्नई",
+        cityKolkata: "कोलकाता",
+        cityNagpur: "नागपुर",
+        cityNashik: "नाशिक",
+        cityAurangabad: "औरंगाबाद",
+        citySolapur: "सोलापुर",
+        cityAmravati: "अमरावती",
+        cityNanded: "नांदेड़",
+        cityKolhapur: "कोल्हापुर",
+        citySangli: "सांगली-मिरज",
+        cityAkola: "अकोला",
+        cityJalgaon: "जलगाँव",
+        cityLatur: "लातूर",
+        cityDhule: "धुले",
+        cityChandrapur: "चंद्रपुर",
+        cityParbhani: "परभणी",
+        cityJalna: "जालना",
+        cityBhusawal: "भुसावल",
+        cityPanvel: "पनवेल",
+        cityThane: "ठाणे",
+        cityNaviMumbai: "नवी मुंबई",
+        cityVasai: "वसई-विरार",
+        cityUlhasnagar: "उल्हासनगर",
+        citySatara: "सतारा",
+        cityWardha: "वर्धा",
+        cityGondia: "गोंदिया",
+        cityYeotmal: "यवतमाल",
+        cityNandurbar: "नंदुरबार"
     },
     
     mr: {
         siteTitle: "सोलार सोल्युशन्स",
+        skipToContent: "मुख्य मजकूरावर जा",
         heroTitle: "तुमच्या घरासाठी स्मार्ट सोलार सोल्युशन्स",
         heroSubtitle: "स्वयंचलित, कार्यक्षम आणि किफायतशीर सौर प्रणाली जास्तीत जास्त ROI सह",
         heroFeature1: "+5% जास्त वीज",
         heroFeature2: "20-30% ROI",
         heroFeature3: "शून्य देखभाल",
         contactUs: "संपर्क साधा",
+        
+        langEnglish: "English",
+        langHindi: "हिंदी",
+        langMarathi: "मराठी",
         
         solarInfoTitle: "संपूर्ण सोलार सिस्टम माहिती",
         info1Title: "पूर्णपणे स्वयंचलित स्वच्छता",
@@ -222,11 +247,20 @@ const i18n = {
         formTitle: "तुमची सोलार सल्ला मिळवा",
         formSubtitle: "तुमचा तपशील भरा आणि आम्ही 24 तासांत संपर्क साधू",
         fullName: "पूर्ण नाव",
+        fullNamePlaceholder: "तुमचे पूर्ण नाव प्रविष्ट करा",
         whatsappNumber: "व्हाट्सएप क्रमांक",
+        whatsappPlaceholder: "उदा., 9876543210",
         address: "पत्ता",
+        addressPlaceholder: "पूर्ण पत्ता प्रविष्ट करा",
         monthlyBill: "मासिक सरासरी वीज बिल (INR)",
+        monthlyBillPlaceholder: "मासिक बिल रक्कम प्रविष्ट करा",
         systemSize: "इच्छित सिस्टम आकार",
         selectOption: "एक पर्याय निवडा",
+        systemSize1kW: "1 किलोवॅट",
+        systemSize2kW: "2 किलोवॅट",
+        systemSize3kW: "3 किलोवॅट",
+        systemSize4kW: "4 किलोवॅट",
+        systemSize5kW: "5 किलोवॅट",
         custom: "सानुकूल",
         location: "तुमचे स्थान निवडा (वैकल्पिक)",
         selectLocation: "जवळचे शहर निवडा",
@@ -239,46 +273,41 @@ const i18n = {
         loading: "तुमची विनंती प्रक्रिया करत आहे...",
         successMessage: "फॉर्म यशस्वीरित्या सबमिट झाला! WhatsApp उघडले जात आहे...",
         errorMessage: "कृपया सर्व फील्ड तपासा आणि पुन्हा प्रयत्न करा",
-        cityNames: {
-            // All India Major Cities
-            mumbai: "मुंबई",
-            delhi: "दिल्ली",
-            bangalore: "बेंगळुरू",
-            pune: "पुणे",
-            hyderabad: "हैदराबाद",
-            ahmedabad: "अहमदाबाद",
-            chennai: "चेन्नई",
-            kolkata: "कोलकाता",
-            
-            // Maharashtra Cities
-            nagpur: "नागपूर",
-            nashik: "नाशिक",
-            aurangabad: "औरंगाबाद",
-            solapur: "सोलापूर",
-            amravati: "अमरावती",
-            nanded: "नांदेड",
-            kolhapur: "कोल्हापूर",
-            sangli: "सांगली-मिरज",
-            akola: "अकोला",
-            jalgaon: "जळगाव",
-            latur: "लातूर",
-            dhule: "धुळे",
-            chandrapur: "चंद्रपूर",
-            parbhani: "परभणी",
-            jalna: "जालना",
-            bhusawal: "भुसावळ",
-            panvel: "पनवेल",
-            thane: "ठाणे",
-            navi_mumbai: "नवी मुंबई",
-            vasai: "वसई-विरार",
-            ulhasnagar: "उल्हासनगर",
-            satara: "सातारा",
-            wardha: "वर्धा",
-            gondia: "गोंदिया",
-            yeotmal: "यवतमाळ",
-            nandurbar: "नंदुरबार",
-            other: "इतर शहर"
-        }
+        
+        cityMumbai: "मुंबई",
+        cityDelhi: "दिल्ली",
+        cityBangalore: "बेंगळुरू",
+        cityPune: "पुणे",
+        cityHyderabad: "हैदराबाद",
+        cityAhmedabad: "अहमदाबाद",
+        cityChennai: "चेन्नई",
+        cityKolkata: "कोलकाता",
+        cityNagpur: "नागपूर",
+        cityNashik: "नाशिक",
+        cityAurangabad: "औरंगाबाद",
+        citySolapur: "सोलापूर",
+        cityAmravati: "अमरावती",
+        cityNanded: "नांदेड",
+        cityKolhapur: "कोल्हापूर",
+        citySangli: "सांगली-मिरज",
+        cityAkola: "अकोला",
+        cityJalgaon: "जळगाव",
+        cityLatur: "लातूर",
+        cityDhule: "धुळे",
+        cityChandrapur: "चंद्रपूर",
+        cityParbhani: "परभणी",
+        cityJalna: "जालना",
+        cityBhusawal: "भुसावळ",
+        cityPanvel: "पनवेल",
+        cityThane: "ठाणे",
+        cityNaviMumbai: "नवी मुंबई",
+        cityVasai: "वसई-विरार",
+        cityUlhasnagar: "उल्हासनगर",
+        citySatara: "सातारा",
+        cityWardha: "वर्धा",
+        cityGondia: "गोंदिया",
+        cityYeotmal: "यवतमाळ",
+        cityNandurbar: "नंदुरबार"
     }
 };
 
@@ -357,31 +386,13 @@ function setLanguage(lang) {
         }
     });
     
-    // Update location options
-    const locationSelect = document.getElementById('location');
-    if (locationSelect && translations.cityNames) {
-        const selectedValue = locationSelect.value;
-        Array.from(locationSelect.options).forEach(option => {
-            const value = option.value;
-            if (translations.cityNames[value]) {
-                option.textContent = translations.cityNames[value];
-            }
-        });
-        // Restore selected value
-        if (selectedValue) {
-            locationSelect.value = selectedValue;
+    // Update data-i18n-placeholder attributes
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-i18n-placeholder');
+        if (translations[key]) {
+            element.placeholder = translations[key];
         }
-    }
-    
-    // Update form hint text
-    const systemSizeHelp = document.getElementById('systemSizeHelp');
-    const locationHelp = document.getElementById('locationHelp');
-    if (systemSizeHelp && translations.systemSizeHelp) {
-        systemSizeHelp.textContent = translations.systemSizeHelp;
-    }
-    if (locationHelp && translations.locationHelp) {
-        locationHelp.textContent = translations.locationHelp;
-    }
+    });
     
     // Update active language button
     langButtons.forEach(btn => {
@@ -450,7 +461,6 @@ function resetPopupTimer() {
 // Get Google Maps Link for City
 function getCityMapLink(city) {
     const cityCoordinates = {
-        // All India Major Cities
         mumbai: "19.0760,72.8777",
         delhi: "28.7041,77.1025",
         bangalore: "12.9716,77.5946",
@@ -459,8 +469,6 @@ function getCityMapLink(city) {
         ahmedabad: "23.0225,72.5714",
         chennai: "13.0827,80.2707",
         kolkata: "22.5726,88.3639",
-        
-        // Maharashtra Cities
         nagpur: "21.1458,79.0882",
         nashik: "19.9975,73.7898",
         aurangabad: "19.8762,75.3433",
@@ -556,7 +564,7 @@ function showLoading(show) {
 // Generate WhatsApp Message with Clean Lead Information
 function generateWhatsAppMessage(formData) {
     const translations = i18n[currentLang];
-    const cityName = formData.location ? translations.cityNames[formData.location] || formData.location : 'Not specified';
+    const cityName = formData.location ? translations[`city${formData.location.charAt(0).toUpperCase() + formData.location.slice(1).replace('_', '')}`] || formData.location : 'Not specified';
     const submissionTime = new Date().toLocaleString('en-IN', {
         timeZone: 'Asia/Kolkata',
         dateStyle: 'medium',
