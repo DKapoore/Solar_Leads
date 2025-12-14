@@ -283,7 +283,7 @@ const i18n = {
 };
 
 // Current Language
-let currentLang = 'en';
+let currentLang = localStorage.getItem('preferredLanguage') || 'en';
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby98cpaDxsrCq7_dYFBoXWxEUhX3Mo9jk3tZg8PHQffbKYCDpbhLG3XWgwbmmAfNnAy/exec';
 
 // DOM Elements
@@ -319,12 +319,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Language Switcher
 function initLanguageSwitcher() {
+    // Set active button based on saved preference
     langButtons.forEach(btn => {
+        const lang = btn.getAttribute('data-lang');
+        btn.classList.toggle('active', lang === currentLang);
+        
         btn.addEventListener('click', function() {
             const lang = this.getAttribute('data-lang');
-            langButtons.forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
             setLanguage(lang);
+            
+            // Save preference
+            localStorage.setItem('preferredLanguage', lang);
         });
     });
 }
@@ -340,7 +345,11 @@ function setLanguage(lang) {
         if (translations[key]) {
             if (element.tagName === 'INPUT' && element.hasAttribute('placeholder')) {
                 element.placeholder = translations[key];
+            } else if (element.tagName === 'INPUT' && element.type === 'submit') {
+                element.value = translations[key];
             } else if (element.tagName === 'OPTION') {
+                element.textContent = translations[key];
+            } else if (element.tagName === 'LABEL') {
                 element.textContent = translations[key];
             } else {
                 element.textContent = translations[key];
@@ -359,8 +368,25 @@ function setLanguage(lang) {
             }
         });
         // Restore selected value
-        locationSelect.value = selectedValue;
+        if (selectedValue) {
+            locationSelect.value = selectedValue;
+        }
     }
+    
+    // Update form hint text
+    const systemSizeHelp = document.getElementById('systemSizeHelp');
+    const locationHelp = document.getElementById('locationHelp');
+    if (systemSizeHelp && translations.systemSizeHelp) {
+        systemSizeHelp.textContent = translations.systemSizeHelp;
+    }
+    if (locationHelp && translations.locationHelp) {
+        locationHelp.textContent = translations.locationHelp;
+    }
+    
+    // Update active language button
+    langButtons.forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
 }
 
 // Initialize Modal
@@ -527,34 +553,32 @@ function showLoading(show) {
     }
 }
 
-// Generate WhatsApp Message with Emojis
+// Generate WhatsApp Message with Clean Lead Information
 function generateWhatsAppMessage(formData) {
     const translations = i18n[currentLang];
     const cityName = formData.location ? translations.cityNames[formData.location] || formData.location : 'Not specified';
-    const mapLink = formData.location ? getCityMapLink(formData.location) : null;
+    const submissionTime = new Date().toLocaleString('en-IN', {
+        timeZone: 'Asia/Kolkata',
+        dateStyle: 'medium',
+        timeStyle: 'short'
+    });
     
-    const message = `🔆 *NEW SOLAR CONSULTATION REQUEST* 🔆
+    const message = `🔵 New Solar Lead Request
 
-👤 *Customer Details:*
-• *Name:* ${formData.name}
-• *WhatsApp:* ${formData.whatsapp}
-• *City:* ${cityName}
-• *Address:* ${formData.address}
+📋 *Customer Information:*
+• Name: ${formData.name}
+• WhatsApp: ${formData.whatsapp}
+• City: ${cityName}
+• Address: ${formData.address}
 
 💡 *Energy Requirements:*
-• *Monthly Bill:* ₹${formData.monthly_bill}
-• *System Size:* ${formData.system_size} kW
-• *Language:* ${currentLang.toUpperCase()}
+• Monthly Electricity Bill: ₹${formData.monthly_bill}
+• Interested System Size: ${formData.system_size} kW
 
-📍 *Location:* ${cityName}
-${mapLink ? `• Map: ${mapLink}` : ''}
-
-📋 *Note to Team:*
-⚠️ *Please confirm the exact location with the customer before visiting.*
-📞 Contact customer to schedule site visit.
-🎯 Provide personalized solar solution based on requirements.
-
-🕒 *Submitted at:* ${new Date().toLocaleString()};
+📅 *Submission Details:*
+• Language: ${currentLang.toUpperCase()}
+• Submitted on: ${submissionTime}
+• Location: ${cityName}`;
     
     return encodeURIComponent(message);
 }
