@@ -135,9 +135,9 @@
                 </div>
                 <div class="header-actions">
                     <div class="language-switcher">
-                        <button class="lang-btn active" data-lang="en" aria-label="Switch to English">English</button>
-                        <button class="lang-btn" data-lang="hi" aria-label="Switch to Hindi">हिंदी</button>
-                        <button class="lang-btn" data-lang="mr" aria-label="Switch to Marathi">मराठी</button>
+                        <button class="lang-btn active" data-lang="en" aria-label="Switch to English" data-i18n="langEnglish">English</button>
+                        <button class="lang-btn" data-lang="hi" aria-label="Switch to Hindi" data-i18n="langHindi">हिंदी</button>
+                        <button class="lang-btn" data-lang="mr" aria-label="Switch to Marathi" data-i18n="langMarathi">मराठी</button>
                     </div>
                     <button class="contact-btn" id="contactBtn" aria-label="Contact Us">
                         <i class="fas fa-phone-alt"></i>
@@ -197,7 +197,7 @@
                 <div class="benefits-list">
                     <div class="benefit-item">
                         <i class="fas fa-check"></i>
-                        <span data-i18n="benefit1">Government subsidy available up to ₹78,000 + Up to ₹20,000 Extra Discount </span>
+                        <span data-i18n="benefit1">Government subsidy available up to ₹78,000 + Up to ₹20,000 Extra Discount</span>
                     </div>
                     <div class="benefit-item">
                         <i class="fas fa-check"></i>
@@ -253,25 +253,25 @@
                 <form id="leadForm" role="form" aria-label="Solar consultation form">
                     <div class="form-group">
                         <label for="name" data-i18n="fullName">Full Name</label>
-                        <input type="text" id="name" name="name" required aria-required="true" aria-describedby="nameError">
+                        <input type="text" id="name" name="name" required aria-required="true" aria-describedby="nameError" data-i18n-placeholder="fullNamePlaceholder">
                         <div class="error-message" id="nameError" role="alert"></div>
                     </div>
                     
                     <div class="form-group">
                         <label for="whatsapp" data-i18n="whatsappNumber">WhatsApp Number</label>
-                        <input type="tel" id="whatsapp" name="whatsapp" required aria-required="true" pattern="^[6-9]\d{9}$" placeholder="e.g., 9876543210" aria-describedby="whatsappError">
+                        <input type="tel" id="whatsapp" name="whatsapp" required aria-required="true" pattern="^[6-9]\d{9}$" aria-describedby="whatsappError" data-i18n-placeholder="whatsappPlaceholder">
                         <div class="error-message" id="whatsappError" role="alert"></div>
                     </div>
                     
                     <div class="form-group">
                         <label for="address" data-i18n="address">Address</label>
-                        <textarea id="address" name="address" rows="3" required aria-required="true" aria-describedby="addressError"></textarea>
+                        <textarea id="address" name="address" rows="3" required aria-required="true" aria-describedby="addressError" data-i18n-placeholder="addressPlaceholder"></textarea>
                         <div class="error-message" id="addressError" role="alert"></div>
                     </div>
                     
                     <div class="form-group">
                         <label for="monthlyBill" data-i18n="monthlyBill">Monthly Average Electricity Bill (INR)</label>
-                        <input type="number" id="monthlyBill" name="monthlyBill" required aria-required="true" min="500" step="100" aria-describedby="billError">
+                        <input type="number" id="monthlyBill" name="monthlyBill" required aria-required="true" min="500" step="100" aria-describedby="billError" data-i18n-placeholder="monthlyBillPlaceholder">
                         <div class="error-message" id="billError" role="alert"></div>
                     </div>
                     
@@ -279,11 +279,11 @@
                         <label for="systemSize" data-i18n="systemSize">Interested System Size</label>
                         <select id="systemSize" name="systemSize" required aria-required="true" aria-describedby="systemSizeHelp">
                             <option value="" disabled selected data-i18n="selectOption">Select an option</option>
-                            <option value="1">1 kW</option>
-                            <option value="2">2 kW</option>
-                            <option value="3">3 kW</option>
-                            <option value="4">4 kW</option>
-                            <option value="5">5 kW</option>
+                            <option value="1" data-i18n="systemSize1kW">1 kW</option>
+                            <option value="2" data-i18n="systemSize2kW">2 kW</option>
+                            <option value="3" data-i18n="systemSize3kW">3 kW</option>
+                            <option value="4" data-i18n="systemSize4kW">4 kW</option>
+                            <option value="5" data-i18n="systemSize5kW">5 kW</option>
                             <option value="custom" data-i18n="custom">Custom</option>
                         </select>
                         <div id="systemSizeHelp" class="form-hint" data-i18n="systemSizeHelp">Choose based on your monthly consumption</div>
@@ -294,42 +294,42 @@
                         <select id="location" name="location" aria-describedby="locationHelp">
                             <option value="" data-i18n="selectLocation">Select nearest city</option>
                             <!-- All India Major Cities -->
-                            <option value="mumbai">Mumbai</option>
-                            <option value="delhi">Delhi</option>
-                            <option value="bangalore">Bangalore</option>
-                            <option value="pune">Pune</option>
-                            <option value="hyderabad">Hyderabad</option>
-                            <option value="ahmedabad">Ahmedabad</option>
-                            <option value="chennai">Chennai</option>
-                            <option value="kolkata">Kolkata</option>
+                            <option value="mumbai" data-i18n="cityMumbai">Mumbai</option>
+                            <option value="delhi" data-i18n="cityDelhi">Delhi</option>
+                            <option value="bangalore" data-i18n="cityBangalore">Bangalore</option>
+                            <option value="pune" data-i18n="cityPune">Pune</option>
+                            <option value="hyderabad" data-i18n="cityHyderabad">Hyderabad</option>
+                            <option value="ahmedabad" data-i18n="cityAhmedabad">Ahmedabad</option>
+                            <option value="chennai" data-i18n="cityChennai">Chennai</option>
+                            <option value="kolkata" data-i18n="cityKolkata">Kolkata</option>
                             
                             <!-- Maharashtra Cities -->
-                            <option value="nagpur">Nagpur</option>
-                            <option value="nashik">Nashik</option>
-                            <option value="aurangabad">Aurangabad</option>
-                            <option value="solapur">Solapur</option>
-                            <option value="amravati">Amravati</option>
-                            <option value="nanded">Nanded</option>
-                            <option value="kolhapur">Kolhapur</option>
-                            <option value="sangli">Sangli-Miraj</option>
-                            <option value="akola">Akola</option>
-                            <option value="jalgaon">Jalgaon</option>
-                            <option value="latur">Latur</option>
-                            <option value="dhule">Dhule</option>
-                            <option value="chandrapur">Chandrapur</option>
-                            <option value="parbhani">Parbhani</option>
-                            <option value="jalna">Jalna</option>
-                            <option value="bhusawal">Bhusawal</option>
-                            <option value="panvel">Panvel</option>
-                            <option value="thane">Thane</option>
-                            <option value="navi_mumbai">Navi Mumbai</option>
-                            <option value="vasai">Vasai-Virar</option>
-                            <option value="ulhasnagar">Ulhasnagar</option>
-                            <option value="satara">Satara</option>
-                            <option value="wardha">Wardha</option>
-                            <option value="gondia">Gondia</option>
-                            <option value="yeotmal">Yeotmal</option>
-                            <option value="nandurbar">Nandurbar</option>
+                            <option value="nagpur" data-i18n="cityNagpur">Nagpur</option>
+                            <option value="nashik" data-i18n="cityNashik">Nashik</option>
+                            <option value="aurangabad" data-i18n="cityAurangabad">Aurangabad</option>
+                            <option value="solapur" data-i18n="citySolapur">Solapur</option>
+                            <option value="amravati" data-i18n="cityAmravati">Amravati</option>
+                            <option value="nanded" data-i18n="cityNanded">Nanded</option>
+                            <option value="kolhapur" data-i18n="cityKolhapur">Kolhapur</option>
+                            <option value="sangli" data-i18n="citySangli">Sangli-Miraj</option>
+                            <option value="akola" data-i18n="cityAkola">Akola</option>
+                            <option value="jalgaon" data-i18n="cityJalgaon">Jalgaon</option>
+                            <option value="latur" data-i18n="cityLatur">Latur</option>
+                            <option value="dhule" data-i18n="cityDhule">Dhule</option>
+                            <option value="chandrapur" data-i18n="cityChandrapur">Chandrapur</option>
+                            <option value="parbhani" data-i18n="cityParbhani">Parbhani</option>
+                            <option value="jalna" data-i18n="cityJalna">Jalna</option>
+                            <option value="bhusawal" data-i18n="cityBhusawal">Bhusawal</option>
+                            <option value="panvel" data-i18n="cityPanvel">Panvel</option>
+                            <option value="thane" data-i18n="cityThane">Thane</option>
+                            <option value="navi_mumbai" data-i18n="cityNaviMumbai">Navi Mumbai</option>
+                            <option value="vasai" data-i18n="cityVasai">Vasai-Virar</option>
+                            <option value="ulhasnagar" data-i18n="cityUlhasnagar">Ulhasnagar</option>
+                            <option value="satara" data-i18n="citySatara">Satara</option>
+                            <option value="wardha" data-i18n="cityWardha">Wardha</option>
+                            <option value="gondia" data-i18n="cityGondia">Gondia</option>
+                            <option value="yeotmal" data-i18n="cityYeotmal">Yeotmal</option>
+                            <option value="nandurbar" data-i18n="cityNandurbar">Nandurbar</option>
                             <option value="other" data-i18n="otherCity">Other City</option>
                         </select>
                         <div id="locationHelp" class="form-hint" data-i18n="locationHelp">Helps us provide accurate service estimates</div>
